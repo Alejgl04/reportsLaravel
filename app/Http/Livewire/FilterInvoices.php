@@ -23,6 +23,10 @@ class FilterInvoices extends Component
     return (new InvoiceExport($this->filters));
   }
 
+  public function generateReportPdf(){
+    return 'asdasd';
+  }
+
   public function render()
   {
 
