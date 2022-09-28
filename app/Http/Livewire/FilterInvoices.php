@@ -6,6 +6,7 @@ use App\Exports\InvoiceExport;
 use App\Models\Invoice;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 class FilterInvoices extends Component
 {
@@ -23,9 +24,14 @@ class FilterInvoices extends Component
     return (new InvoiceExport($this->filters));
   }
 
-  public function generateReportPdf(){
-    return 'asdasd';
-  }
+  // public function downloadPDF() {
+  //   $data = Invoice::all();
+  //     // share data to view
+  //   $pdf = PDF::loadView('invoices.export', ['data' => $data ]);
+  //   var_dump($pdf)
+  //     // download PDF file with download method
+  //   return $pdf->download('pdf_file.pdf');
+  // }
 
   public function render()
   {
