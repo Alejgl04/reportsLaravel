@@ -15,6 +15,7 @@ class Invoice extends Model
       'tax',
       'total',
       'user_id',
+      'created_at'
     ];
 
     /**Query scopes */
